@@ -1,9 +1,7 @@
 name: Deploy MultiK8s
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
+    
 env:
   SHA: $(git rev-parse HEAD)
 

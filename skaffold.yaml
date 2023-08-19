@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: dencoseca/client-skaffold
+    - image: dencoseca/multi-client
       context: client
       docker:
         dockerfile: Dockerfile.dev
@@ -20,7 +20,7 @@ build:
             dest: .
           - src: "src/**/*.html"
             dest: .
-    - image: dencoseca/worker-skaffold
+    - image: dencoseca/multi-worker
       context: worker
       docker:
         dockerfile: Dockerfile.dev
@@ -28,7 +28,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: dencoseca/server-skaffold
+    - image: dencoseca/multi-server
       context: server
       docker:
         dockerfile: Dockerfile.dev
